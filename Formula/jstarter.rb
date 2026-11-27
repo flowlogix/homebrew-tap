@@ -1,14 +1,14 @@
-# Generated with JReleaser 1.27.0 at 2026-11-26T22:35:06.382933-06:00
+# Generated with JReleaser 1.27.0 at 2026-11-26T22:54:31.427195-06:00
 
 class Jstarter < Formula
   desc "Java and Jakarta EE project starter by Flow Logix"
   homepage "https://start.flowlogix.com/"
-  version "0.5"
+  version "0.5.1"
   license "Apache-2.0"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://nexus.flowlogix.com/repository/maven-releases/com/flowlogix/jstarter/0.5/jstarter-0.5-osx-aarch64.zip"
-    sha256 "b00706b97fa321142421cedafc5ceb250ecd22593f2d2b6a5f7be399df2788d9"
+    url "https://dl.flowlogix.com/releases/jstarter/0.5.1/jstarter-0.5.1-osx-aarch64.zip"
+    sha256 "9f802cab8c6a35b2cfec23a064bbf088be96cff7774a8c07565f3d036b8545a9"
   end
 
 
@@ -19,6 +19,6 @@ class Jstarter < Formula
 
   test do
     output = shell_output("#{bin}/jstarter --version")
-    assert_match "0.5", output
+    assert_match "0.5.1", output
   end
 end
